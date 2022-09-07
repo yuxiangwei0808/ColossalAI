@@ -43,6 +43,7 @@ def run_master(args):
     engine.initialize_optimizer(optimizer_class, lr=lr)
 
     _ = engine.forward_backward(input_sample)
+    engine.step()
 
     cuda_rpc_result = []
     single_result = []
